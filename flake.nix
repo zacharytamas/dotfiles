@@ -12,23 +12,23 @@
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }: 
+  outputs = inputs@{ 
+    self, 
+    nix-darwin, 
+    nixpkgs, 
+    nix-homebrew, 
+    home-manager,
+  }: 
     let 
-      user = "zacharyjones";
+      primaryUser = "zacharyjones";
     in
     {
       darwinConfigurations."wkt" = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit user; };
+        system = "aarch64-darwin";
+
+        specialArgs = { inherit inputs self primaryUser; };
         modules = [ 
-          ./configuration.nix 
-          nix-homebrew.darwinModules.nix-homebrew
-          home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit user; };
-            home-manager.users.${user} = import ./home.nix;
-          }
+          ./darwin
         ];
       };
     };
