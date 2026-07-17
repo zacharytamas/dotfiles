@@ -13,8 +13,6 @@
 
     taps = [
       { name = "vet-run/homebrew-vet"; trusted = true; }
-      { name = "derailed/k9s"; trusted = true; }
-      { name = "weknowtraining/tap"; trusted = true; }
       { name = "humanlayer/humanlayer"; trusted = true; }
       { name = "rjyo/moshi"; trusted = true; }
     ];
@@ -30,8 +28,6 @@
       "sk"
       "tree"
       "vet-run"
-      "k9s"
-      "wkt"
     ];
 
     casks = [

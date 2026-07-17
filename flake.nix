@@ -19,17 +19,23 @@
     nix-homebrew, 
     home-manager,
   }: 
-    let 
-      primaryUser = "zacharyjones";
-    in
-    {
-      darwinConfigurations."wkt" = nix-darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-
-        specialArgs = { inherit inputs self primaryUser; };
-        modules = [ 
-          ./darwin
-        ];
-      };
+  let
+    mkDarwin = {
+      primaryUser,
+      system ? "aarch64-darwin",
+      hostModules ? [],
+    }:
+    nix-darwin.lib.darwinSystem {
+      inherit system;
+      specialArgs = { inherit inputs self primaryUser; };
+      modules = [
+        ./darwin
+      ] ++ hostModules;
     };
+  in {
+    darwinConfigurations.wkt = mkDarwin {
+      primaryUser = "zacharyjones";
+      hostModules = [ ./hosts/wkt ];
+    };
+  };
 }
