@@ -1,6 +1,15 @@
-{ config, primaryUser, ... }:
+{ config, primaryUser, lib, ... }:
 let
   dotfiles = "${config.home.homeDirectory}/.dotfiles";
+
+  links = [
+    { src = ".config/herdr/config.toml"; dest = ".config/herdr/config.toml"; }
+    { src = ".omp/agent/config.yml"; dest = ".omp/agent/config.yml"; }
+    # Share AGENTS.md across different harnesses
+    { src = "AGENTS.md"; dest = ".claude/CLAUDE.md"; }
+    { src = "AGENTS.md"; dest = ".codex/AGENTS.md"; }
+    { src = "AGENTS.md"; dest = ".config/opencode/AGENTS.md"; }
+  ];
 in
 {
   imports = [
@@ -17,14 +26,8 @@ in
     };
   };
 
-  home.file.".config/herdr/config.toml".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr/config.toml";
-
-  # Share my AGENTS.md file across different harnesses
-  home.file.".claude/CLAUDE.md".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
-  home.file.".codex/AGENTS.md".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
-  home.file.".config/opencode/AGENTS.md".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
+  home.file = lib.listToAttrs (map ({ src, dest }: {
+    name = dest;
+    value.source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/${src}";
+  }) links);
 }
