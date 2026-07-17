@@ -1,3 +1,5 @@
+# spell-checker: disable
+
 modelRoles:
   default: openai-codex/gpt-5.6-sol:low
   plan: openai-codex/gpt-5.6-sol:high
