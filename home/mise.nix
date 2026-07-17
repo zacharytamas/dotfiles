@@ -4,13 +4,10 @@
     enable = true;
     enableZshIntegration = true;
 
-    settings = {
-      auto_install = true;
-    };
-
     globalConfig = {
       settings = {
         minimum_release_age = "1d";
+        auto_install = true;
       };
       tools = {
         "aqua:ajeetdsouza/zoxide" = "latest";
