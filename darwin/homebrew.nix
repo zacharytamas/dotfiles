@@ -36,6 +36,7 @@
       "google-chrome"
       "1password"
       "warp"
+      "spotify"
     ];
   };
 
