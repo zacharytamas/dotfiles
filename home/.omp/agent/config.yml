@@ -1,0 +1,91 @@
+modelRoles:
+  default: openai-codex/gpt-5.6-sol:low
+  plan: openai-codex/gpt-5.6-sol:high
+  smol: openai-codex/gpt-5.6-terra
+  commit: opencode-go/kimi-k2.7-code
+  slow: openai-codex/gpt-5.6-sol:xhigh
+  task: openai-codex/gpt-5.6-terra:high
+  advisor: openai-codex/gpt-5.6-sol:high
+  tiny: openai-codex/gpt-5.6-luna:medium
+calc:
+  enabled: true
+ttsr:
+  contextMode: discard
+memories:
+  enabled: true
+branchSummary:
+  enabled: true
+followUpMode: one-at-a-time
+interruptMode: immediate
+doubleEscapeAction: tree
+task:
+  isolation:
+    commits: ai
+    mode: auto
+    merge: patch
+  maxRecursionDepth: 1
+  eager: preferred
+  enableLsp: true
+  batch: true
+  showResolvedModelBadge: true
+autocompleteMaxVisible: 7
+stt:
+  enabled: true
+lsp:
+  diagnosticsOnEdit: true
+  formatOnWrite: true
+renderMermaid:
+  enabled: true
+notebook:
+  enabled: false
+providers:
+  openaiWebsockets: "on"
+  webSearch: codex
+  image: auto
+  tts: xai
+checkpoint:
+  enabled: true
+hideThinkingBlock: true
+statusLine:
+  preset: default
+  separator: slash
+  transparent: false
+  compactThinkingLevel: true
+display:
+  showTokenUsage: false
+  shimmer: kitt
+  cacheMissMarker: true
+showHardwareCursor: true
+edit:
+  mode: hashline
+  streamingAbort: true
+python:
+  toolMode: both
+  kernelMode: session
+inspect_image:
+  enabled: true
+github:
+  enabled: true
+dev:
+  autoqa:
+    consent: denied
+secrets:
+  enabled: true
+defaultThinkingLevel: auto
+async:
+  enabled: true
+setupVersion: 1
+advisor:
+  enabled: true
+tui:
+  tight: true
+  textSizing: true
+autolearn:
+  enabled: true
+ask:
+  timeout: 120
+startup:
+  quiet: true
+memory:
+  backend: local
+symbolPreset: nerd
