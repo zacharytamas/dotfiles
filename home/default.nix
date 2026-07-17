@@ -5,6 +5,7 @@ let
   links = [
     { src = ".config/herdr/config.toml"; dest = ".config/herdr/config.toml"; }
     { src = ".omp/agent/config.yml"; dest = ".omp/agent/config.yml"; }
+    { src = "dot-no-mistakes/config.yaml"; dest = ".no-mistakes/config.yaml"; }
     # Share AGENTS.md across different harnesses
     { src = "AGENTS.md"; dest = ".claude/CLAUDE.md"; }
     { src = "AGENTS.md"; dest = ".codex/AGENTS.md"; }
@@ -20,10 +21,6 @@ in
   home = {
     username = primaryUser;
     stateVersion = "24.11";
-    sessionVariables = {
-      EDITOR = "nvim";
-      XDG_CONFIG_HOME = "$HOME/.config";
-    };
   };
 
   home.file = lib.listToAttrs (map ({ src, dest }: {

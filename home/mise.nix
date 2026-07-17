@@ -26,6 +26,7 @@
         "aqua:openai/codex" = "latest";
         "aqua:sharkdp/bat" = "latest";
         "aqua:sharkdp/fd" = "latest";
+        "npm:acpx" = "latest";
         "biome" = "latest";
         "bun" = "latest";
         "eza" = "latest";

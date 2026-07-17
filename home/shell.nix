@@ -1,4 +1,11 @@
-_: {
+{ ... }: {
+
+  home.sessionPath = [ "$HOME/.local/bin" ];
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    XDG_CONFIG_HOME = "$HOME/.config";
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
