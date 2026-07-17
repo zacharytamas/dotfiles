@@ -34,8 +34,6 @@
       "humanlayer"
       "1password-cli"
       "codexbar"
-      "font-maple-mono"
-      "font-maple-mono-nf"
     ];
   };
 

@@ -17,6 +17,12 @@
     autoMigrate = true;
   };
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.lilex
+    nerd-fonts.martian-mono
+    maple-mono.NF
+  ];
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
