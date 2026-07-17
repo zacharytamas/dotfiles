@@ -18,7 +18,6 @@
     brews = [
       "herdr"
       "mise"
-      "mosh"
       { name = "moshi-hook"; start_service = true; }
       "fzf"
       "zoxide"

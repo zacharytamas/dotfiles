@@ -17,6 +17,13 @@
     autoMigrate = true;
   };
 
+  environment.systemPackages = with pkgs; [
+    delta
+    bat
+    glow
+    mosh
+  ];
+
   fonts.packages = with pkgs; [
     nerd-fonts.lilex
     nerd-fonts.martian-mono
