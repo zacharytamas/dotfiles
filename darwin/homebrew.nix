@@ -9,8 +9,6 @@
       upgrade = true;
     };
 
-    caskArgs.no_quarantine = true;
-
     taps = [
       { name = "vet-run/homebrew-vet"; trusted = true; }
       { name = "humanlayer/humanlayer"; trusted = true; }
@@ -34,6 +32,11 @@
       "humanlayer"
       "1password-cli"
       "codexbar"
+      "cotypist"
+      "raycast"
+      "google-chrome"
+      "1password"
+      "warp"
     ];
   };
 
