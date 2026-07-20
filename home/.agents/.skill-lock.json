@@ -1,0 +1,42 @@
+{
+  "version": 3,
+  "skills": {
+    "vue-best-practices": {
+      "source": "hyf0/vue-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyf0/vue-skills.git",
+      "skillPath": "skills/vue-best-practices/SKILL.md",
+      "skillFolderHash": "df586456656749f3f349b48109b79675f11750b3",
+      "installedAt": "2026-01-27T21:33:13.119Z",
+      "updatedAt": "2026-01-28T20:35:26.165Z"
+    },
+    "i-have-adhd": {
+      "source": "ayghri/i-have-adhd",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ayghri/i-have-adhd.git",
+      "skillPath": "skills/i-have-adhd/SKILL.md",
+      "skillFolderHash": "73f48b9a8b7942b6a9f4dbe6bfff45faeda7cc3c",
+      "installedAt": "2026-07-20T18:51:16.881Z",
+      "updatedAt": "2026-07-20T18:51:16.881Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code"
+  ]
+}
