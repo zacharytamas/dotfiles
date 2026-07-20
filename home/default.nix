@@ -4,6 +4,7 @@ let
 
   links = [
     { src = ".config/herdr/config.toml"; dest = ".config/herdr/config.toml"; }
+    { src = ".config/herdr/plugins/config"; dest = ".config/herdr/plugins/config"; }
     { src = ".omp/agent/config.yml"; dest = ".omp/agent/config.yml"; }
     { src = "dot-no-mistakes/config.yaml"; dest = ".no-mistakes/config.yaml"; }
     # Share AGENTS.md across different harnesses
