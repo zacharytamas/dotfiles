@@ -1,4 +1,4 @@
-{ pkgs, inputs, self, primaryUser, ... }:
+{ lib, pkgs, inputs, self, primaryUser, ... }:
 {
   imports = [
     ./homebrew.nix
@@ -6,6 +6,11 @@
     inputs.home-manager.darwinModules.home-manager
     inputs.nix-homebrew.darwinModules.nix-homebrew
   ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "claude-code"
+    ];
 
   nix = {
     enable = false;
@@ -21,6 +26,7 @@
     delta
     bat
     glow
+    claude-code
     mosh
   ];
 
