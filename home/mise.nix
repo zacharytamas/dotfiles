@@ -23,7 +23,6 @@
         "aqua:koalaman/shellcheck" = "latest";
         "aqua:max-sixty/worktrunk" = "latest";
         "aqua:neovim/neovim" = "latest";
-        "aqua:openai/codex" = "latest";
         "aqua:sharkdp/bat" = "latest";
         "aqua:sharkdp/fd" = "latest";
         "npm:acpx" = "latest";

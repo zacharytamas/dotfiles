@@ -27,6 +27,7 @@
     bat
     glow
     claude-code
+    codex
     mosh
   ];
 
