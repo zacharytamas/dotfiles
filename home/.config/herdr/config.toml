@@ -9,8 +9,7 @@ show_agent_labels_on_pane_borders = true
 agent_panel_sort = "spaces"
 
 [theme]
-name = "catppuccin"
-auto_switch = false
+name = "terminal"
 
 [[keys.command]]
 key = "prefix+shift+g"
@@ -20,7 +19,14 @@ description = "run lazygit"
 width = "80%"
 height = "80%"
 
-[[keys.command]]              # open in a split beside your work
+[[keys.command]]
 key = "prefix+f"
-type = "shell"
-command = "herdr plugin action invoke open-file-viewer --plugin herdr-file-viewer"
+type = "plugin_action"
+command = "herdr-file-viewer.open-file-viewer"
+description = "open file viewer"
+
+[[keys.command]]
+key = "prefix+w"
+type = "plugin_action"
+command = "worktrunk.open"
+description = "worktrunk picker"
