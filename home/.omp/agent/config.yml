@@ -69,8 +69,7 @@ inspect_image:
 github:
   enabled: true
 dev:
-  autoqa:
-    consent: denied
+  autoqaConsent: denied
 secrets:
   enabled: true
 defaultThinkingLevel: auto
@@ -89,5 +88,9 @@ ask:
 startup:
   quiet: true
 memory:
-  backend: local
+  backend: hindsight
 symbolPreset: nerd
+hindsight:
+  apiUrl: http://localhost:8888
+  bankId: omp-memory
+  scoping: per-project-tagged
