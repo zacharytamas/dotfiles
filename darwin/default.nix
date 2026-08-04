@@ -25,7 +25,9 @@
   environment.systemPackages = with pkgs; [
     delta
     bat
+    eza
     glow
+    gh
     claude-code
     codex
     mosh

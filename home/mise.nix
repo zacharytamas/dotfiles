@@ -15,7 +15,6 @@
         "aqua:ast-grep/ast-grep" = "latest";
         "aqua:astral-sh/uv" = "latest";
         "aqua:BurntSushi/ripgrep" = "latest";
-        "aqua:cli/cli" = "latest";
         "aqua:direnv/direnv" = "latest";
         "aqua:jesseduffield/lazydocker" = "latest";
         "aqua:jesseduffield/lazygit" = "latest";
@@ -28,7 +27,6 @@
         "npm:acpx" = "latest";
         "biome" = "latest";
         "bun" = "latest";
-        "eza" = "latest";
         "ffmpeg" = "latest";
         "github:can1357/oh-my-pi" = "latest";
         "github:fallow-rs/fallow" = "latest";
