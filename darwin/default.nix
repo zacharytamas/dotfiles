@@ -29,7 +29,6 @@
     glow
     gh
     claude-code
-    codex
     mosh
   ];
 

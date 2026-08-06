@@ -30,6 +30,7 @@
     casks = [
       "humanlayer"
       "1password-cli"
+      "codex"
       "codexbar"
       "cotypist"
       "raycast"

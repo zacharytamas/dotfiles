@@ -13,7 +13,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ls = "eza --icons=always --hyperlink=auto";
+      ls = "eza --icons=always --hyperlink";
       flush_dns = "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder";
     };
   };
