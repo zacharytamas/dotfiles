@@ -1,4 +1,4 @@
-agent: acp:omp
+agent: codex
 
 commit:
   fix_message: "chore({{.Step}}): {{.Summary}}"
