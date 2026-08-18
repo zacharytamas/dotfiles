@@ -1,7 +1,4 @@
-# spell-checker: disable
-
-modelRoles:
-  default: openai-codex/gpt-5.6-sol:low
+modelRoles: 
   plan: openai-codex/gpt-5.6-sol:high
   smol: openai-codex/gpt-5.6-terra
   commit: opencode-go/kimi-k2.7-code
@@ -9,19 +6,21 @@ modelRoles:
   task: openai-codex/gpt-5.6-terra:high
   advisor: openai-codex/gpt-5.6-sol:high
   tiny: openai-codex/gpt-5.6-luna:medium
-calc:
+  default: xai-oauth/grok-4.6:medium
+  vision: openai-codex/gpt-5.6-sol:medium
+calc: 
   enabled: true
-ttsr:
+ttsr: 
   contextMode: discard
-memories:
+memories: 
   enabled: true
-branchSummary:
+branchSummary: 
   enabled: true
 followUpMode: one-at-a-time
 interruptMode: immediate
 doubleEscapeAction: tree
-task:
-  isolation:
+task: 
+  isolation: 
     commits: ai
     mode: auto
     merge: patch
@@ -31,66 +30,88 @@ task:
   batch: true
   showResolvedModelBadge: true
 autocompleteMaxVisible: 7
-stt:
+stt: 
   enabled: true
-lsp:
+lsp: 
   diagnosticsOnEdit: true
   formatOnWrite: true
-renderMermaid:
+renderMermaid: 
   enabled: true
-notebook:
+notebook: 
   enabled: false
-providers:
+providers: 
   openaiWebsockets: "on"
-  webSearch: codex
-  image: auto
   tts: xai
-checkpoint:
+  webSearchOrder: 
+    - codex
+    - perplexity
+    - gemini
+    - anthropic
+    - xai
+    - zai
+    - exa
+    - tinyfish
+    - jina
+    - kagi
+    - tavily
+    - firecrawl
+    - brave
+    - kimi
+    - parallel
+    - synthetic
+    - searxng
+    - startpage
+    - duckduckgo
+    - ecosia
+    - google
+    - mojeek
+    - public
+checkpoint: 
   enabled: true
 hideThinkingBlock: true
-statusLine:
+statusLine: 
   preset: default
   separator: slash
   transparent: false
   compactThinkingLevel: true
-display:
+display: 
   showTokenUsage: false
   shimmer: kitt
   cacheMissMarker: true
 showHardwareCursor: true
-edit:
+edit: 
   mode: hashline
   streamingAbort: true
-python:
+python: 
   toolMode: both
   kernelMode: session
-inspect_image:
+inspect_image: 
+  mode: "on"
+github: 
   enabled: true
-github:
-  enabled: true
-dev:
+dev: 
   autoqaConsent: denied
-secrets:
+secrets: 
   enabled: true
 defaultThinkingLevel: auto
-async:
+async: 
   enabled: true
 setupVersion: 1
-advisor:
+advisor: 
   enabled: true
-tui:
+tui: 
   tight: true
   textSizing: true
-autolearn:
+autolearn: 
   enabled: true
-ask:
+ask: 
   timeout: 120
-startup:
+startup: 
   quiet: true
-memory:
+memory: 
   backend: hindsight
 symbolPreset: nerd
-hindsight:
+hindsight: 
   apiUrl: http://localhost:8888
   bankId: omp-memory
   scoping: per-project-tagged
