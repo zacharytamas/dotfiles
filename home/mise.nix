@@ -28,7 +28,10 @@
         "biome" = "latest";
         "bun" = "latest";
         "ffmpeg" = "latest";
-        "github:can1357/oh-my-pi" = "latest";
+        "github:can1357/oh-my-pi" = {
+          version = "latest";
+          minimum_release_age = "6h";
+        };
         "github:fallow-rs/fallow" = "latest";
         "github:modem-dev/hunk" = "latest";
         "go" = "latest";

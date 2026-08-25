@@ -1,9 +1,9 @@
 modelRoles: 
   plan: openai-codex/gpt-5.6-sol:high
-  smol: openai-codex/gpt-5.6-terra
-  commit: opencode-go/kimi-k2.7-code
+  smol: xai-oauth/grok-4.6:auto
+  commit: xai-oauth/grok-4.6:auto
   slow: openai-codex/gpt-5.6-sol:xhigh
-  task: openai-codex/gpt-5.6-terra:high
+  task: xai-oauth/grok-4.6:high
   advisor: openai-codex/gpt-5.6-sol:high
   tiny: openai-codex/gpt-5.6-luna:medium
   default: xai-oauth/grok-4.6:medium
@@ -22,13 +22,15 @@ doubleEscapeAction: tree
 task: 
   isolation: 
     commits: ai
-    mode: auto
+    mode: apfs
     merge: patch
-  maxRecursionDepth: 1
+  maxRecursionDepth: 2
   eager: preferred
   enableLsp: true
   batch: true
   showResolvedModelBadge: true
+  enableEffort: false
+  maxConcurrency: 32
 autocompleteMaxVisible: 7
 stt: 
   enabled: true
@@ -96,7 +98,7 @@ secrets:
 defaultThinkingLevel: auto
 async: 
   enabled: true
-setupVersion: 1
+setupVersion: 2
 advisor: 
   enabled: true
 tui: 
@@ -104,6 +106,7 @@ tui:
   textSizing: true
 autolearn: 
   enabled: true
+  autoContinue: true
 ask: 
   timeout: 120
 startup: 
@@ -115,3 +118,14 @@ hindsight:
   apiUrl: http://localhost:8888
   bankId: omp-memory
   scoping: per-project-tagged
+theme: 
+  dark: amethyst
+composer: 
+  shape: rule
+eval: 
+  autoBackground: 
+    enabled: true
+astGrep: 
+  enabled: true
+computer: 
+  enabled: true
