@@ -1,6 +1,6 @@
 { ... }: {
 
-  home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
+  home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" "$HOME/.bun/bin" ];
   home.sessionVariables = {
     EDITOR = "nvim";
     XDG_CONFIG_HOME = "$HOME/.config";
