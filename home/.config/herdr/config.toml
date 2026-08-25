@@ -9,8 +9,9 @@ show_agent_labels_on_pane_borders = true
 agent_panel_sort = "spaces"
 
 [theme]
-name = "terminal"
+name = "kanagawa"
 
+auto_switch = false
 [[keys.command]]
 key = "prefix+shift+g"
 type = "popup"
