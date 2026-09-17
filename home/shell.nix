@@ -1,6 +1,5 @@
 { ... }: {
 
-  home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" "$HOME/.bun/bin" ];
   home.sessionVariables = {
     EDITOR = "nvim";
     XDG_CONFIG_HOME = "$HOME/.config";
@@ -8,6 +7,10 @@
 
   programs.zsh = {
     enable = true;
+    envExtra = ''
+      typeset -U path PATH
+      path=("$HOME/.local/bin" "$HOME/.cargo/bin" "$HOME/.bun/bin" "$HOME/.opencode/bin" "$HOME/Library/pnpm/bin" $path)
+    '';
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
