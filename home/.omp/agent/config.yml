@@ -1,29 +1,29 @@
-modelRoles: 
+modelRoles:
   plan: openai-codex/gpt-5.6-sol:high
   smol: xai-oauth/grok-4.6:auto
   commit: xai-oauth/grok-4.6:auto
   slow: openai-codex/gpt-5.6-sol:xhigh
   task: xai-oauth/grok-4.6:high
-  advisor: openai-codex/gpt-5.6-sol:high
+  advisor: openai-codex/gpt-6-astra:low
   tiny: openai-codex/gpt-5.6-luna:medium
-  default: xai-oauth/grok-4.6:medium
+  default: openai-codex/gpt-6-astra:medium
   vision: openai-codex/gpt-5.6-sol:medium
-calc: 
+calc:
   enabled: true
-ttsr: 
+ttsr:
   contextMode: discard
-memories: 
+memories:
   enabled: true
-branchSummary: 
+branchSummary:
   enabled: true
 followUpMode: one-at-a-time
 interruptMode: immediate
-doubleEscapeAction: tree
-task: 
-  isolation: 
+doubleEscapeAction: rewind
+task:
+  isolation:
     commits: ai
-    mode: apfs
     merge: patch
+    enabled: true
   maxRecursionDepth: 2
   eager: preferred
   enableLsp: true
@@ -32,19 +32,19 @@ task:
   enableEffort: false
   maxConcurrency: 32
 autocompleteMaxVisible: 7
-stt: 
+stt:
   enabled: true
-lsp: 
+lsp:
   diagnosticsOnEdit: true
   formatOnWrite: true
-renderMermaid: 
+renderMermaid:
   enabled: true
-notebook: 
+notebook:
   enabled: false
-providers: 
+providers:
   openaiWebsockets: "on"
   tts: xai
-  webSearchOrder: 
+  webSearchOrder:
     - codex
     - perplexity
     - gemini
@@ -68,64 +68,66 @@ providers:
     - google
     - mojeek
     - public
-checkpoint: 
+checkpoint:
   enabled: true
 hideThinkingBlock: true
-statusLine: 
+statusLine:
   preset: default
   separator: slash
   transparent: false
   compactThinkingLevel: true
-display: 
+display:
   showTokenUsage: false
-  shimmer: kitt
+  shimmer: classic
   cacheMissMarker: true
 showHardwareCursor: true
-edit: 
+edit:
   mode: hashline
   streamingAbort: true
-python: 
+python:
   toolMode: both
   kernelMode: session
-inspect_image: 
-  mode: "on"
-github: 
+github:
   enabled: true
-dev: 
+dev:
   autoqaConsent: denied
-secrets: 
+secrets:
   enabled: true
 defaultThinkingLevel: auto
-async: 
+async:
   enabled: true
 setupVersion: 2
-advisor: 
+advisor:
   enabled: true
-tui: 
+tui:
   tight: true
   textSizing: true
-autolearn: 
+autolearn:
   enabled: true
   autoContinue: true
-ask: 
+ask:
   timeout: 120
-startup: 
+startup:
   quiet: true
-memory: 
+memory:
   backend: hindsight
 symbolPreset: nerd
-hindsight: 
+hindsight:
   apiUrl: http://localhost:8888
   bankId: omp-memory
   scoping: per-project-tagged
-theme: 
+theme:
   dark: amethyst
-composer: 
+composer:
   shape: rule
-eval: 
-  autoBackground: 
+eval:
+  autoBackground:
     enabled: true
-astGrep: 
+astGrep:
   enabled: true
-computer: 
+computer:
   enabled: true
+isolation:
+  backend: apfs
+enabledProviders:
+  - claude
