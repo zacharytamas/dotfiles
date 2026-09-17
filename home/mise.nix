@@ -32,7 +32,6 @@
           version = "latest";
           minimum_release_age = "6h";
         };
-        "github:fallow-rs/fallow" = "latest";
         "github:modem-dev/hunk" = "latest";
         "go" = "latest";
         "node" = "latest";
