@@ -1,13 +1,17 @@
 modelRoles:
   plan: openai-codex/gpt-5.6-sol:high
-  smol: xai-oauth/grok-4.6:auto
+  smol: xai-oauth/grok-4.7:auto
   commit: xai-oauth/grok-4.6:auto
-  slow: openai-codex/gpt-5.6-sol:xhigh
-  task: xai-oauth/grok-4.6:high
+  slow: openai-codex/gpt-6-astra:high
+  task: xai-oauth/grok-4.7:auto
   advisor: openai-codex/gpt-6-astra:low
   tiny: openai-codex/gpt-5.6-luna:medium
   default: openai-codex/gpt-6-astra:medium
   vision: openai-codex/gpt-5.6-sol:medium
+  web: openai-codex/gpt-5.6-luna
+  speech: xai/grok-tts
+  image: xai-oauth/grok-imagine-image:auto
+  judge: openai-codex/gpt-6-astra:high
 calc:
   enabled: true
 ttsr:
@@ -43,31 +47,6 @@ notebook:
   enabled: false
 providers:
   openaiWebsockets: "on"
-  tts: xai
-  webSearchOrder:
-    - codex
-    - perplexity
-    - gemini
-    - anthropic
-    - xai
-    - zai
-    - exa
-    - tinyfish
-    - jina
-    - kagi
-    - tavily
-    - firecrawl
-    - brave
-    - kimi
-    - parallel
-    - synthetic
-    - searxng
-    - startpage
-    - duckduckgo
-    - ecosia
-    - google
-    - mojeek
-    - public
 checkpoint:
   enabled: true
 hideThinkingBlock: true
@@ -131,3 +110,35 @@ isolation:
   backend: apfs
 enabledProviders:
   - claude
+retry:
+  fallbackChains:
+    web:
+      - web/perplexity
+      - google/gemini-2.5-flash
+      - anthropic/claude-haiku-4-5
+      - xai/grok-4.5
+      - web/zai
+      - web/exa
+      - web/tinyfish
+      - web/jina
+      - web/kagi
+      - web/tavily
+      - web/firecrawl
+      - web/brave
+      - web/kimi
+      - web/parallel
+      - web/synthetic
+      - web/searxng
+      - web/startpage
+      - web/duckduckgo
+      - web/ecosia
+      - web/google
+      - web/mojeek
+      - web/public
+      - google-antigravity/gemini-2.5-flash
+      - openai-codex/gpt-5.6
+      - openai-codex/gpt-5.5
+      - xai-oauth/grok-4.5
+      - web/ollama
+    speech:
+      []
